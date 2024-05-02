@@ -8,8 +8,8 @@ function App() {
       <HeaderContainer>
         <h1>Haul App</h1>
         <p>
-          Track your recent food haul, save it to your Haul list, create future
-          haul lists based on previous hauls, and more coming.
+          Track your recent food haul, save it to your Hauls, create future haul
+          lists based on previous Hauls, and more coming.
         </p>
       </HeaderContainer>
     </AppContainer>
