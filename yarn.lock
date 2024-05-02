@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@alzera/react-scanner@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@alzera/react-scanner/-/react-scanner-1.0.6.tgz#8768b98b6879cf8288eeff1074b48897082d531e"
+  integrity sha512-ypPsBu2V5Kf8x6qBOsahXb+ZaxHYGwEzd36n265+eigJPon7LMNxwTlvm2MV3PzUNhgT/olTlIekHK8gs4cSOQ==
+
 "@ampproject/remapping@^2.2.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.3.0.tgz#ed441b6fa600072520ce18b43d2c8cc8caecc7f4"
@@ -392,11 +397,6 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-2.0.3.tgz#4a2868d75d6d6963e423bcf90b7fd1be343409d3"
   integrity sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==
 
-"@jeremiahblanch/react-scanner@^1.1.7":
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/@jeremiahblanch/react-scanner/-/react-scanner-1.1.7.tgz#aab7cea724df33409f80232da60615d92e95e257"
-  integrity sha512-RsOC9MbElsAGkvWBwfqlsnrCz4xEWUvio/xei0HQeM1SS6liaxaqY/9/lLkcf5fHSdoheFvzTDIf8AJC7Ax4XQ==
-
 "@jridgewell/gen-mapping@^0.3.5":
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.5.tgz#dcce6aff74bdf6dad1a95802b69b04a2fcb1fb36"
@@ -597,6 +597,11 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
+
+"@vitejs/plugin-basic-ssl@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-basic-ssl/-/plugin-basic-ssl-1.1.0.tgz#8b840305a6b48e8764803435ec0c716fa27d3802"
+  integrity sha512-wO4Dk/rm8u7RNhOf95ZzcEmC9rYOncYgvq4z3duaJrCgjN8BxAnDVyndanfcJZ0O6XZzHz6Q0hTimxTg8Y9g/A==
 
 "@vitejs/plugin-react@^4.2.1":
   version "4.2.1"
