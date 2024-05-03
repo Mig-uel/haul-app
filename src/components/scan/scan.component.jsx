@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import { Scanner } from '@alzera/react-scanner'
 
+import { useSelector, useDispatch } from 'react-redux'
+import { addItem } from '../../store/items/itemsSlice'
+
 import { ScannerContainer, CameraContainer } from './scan.styles'
 
 const Scan = () => {
   const [scannedData, setScannedData] = useState('')
   const [active, setActive] = useState(false)
   const [error, setError] = useState(null)
+
+  const items = useSelector(({ items }) => items)
+  console.log(items)
 
   return (
     <ScannerContainer>
