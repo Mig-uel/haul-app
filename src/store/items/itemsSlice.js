@@ -1,12 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = {
-  items: [],
-}
+const items = []
 
 export const itemsSlice = createSlice({
   name: 'items',
-  initialState,
+  initialState: items,
 
   reducers: {
     addItem: ({ items }, { payload }) => ({ ...items, payload }),
