@@ -30,8 +30,6 @@ const Scan = () => {
         </CameraContainer>
       )}
 
-      {/* {console.log(error)} */}
-      {/* {error && <p>Error: {error.error}</p>} */}
       <button onClick={() => setActive((active) => !active)}>Scan Haul</button>
     </ScannerContainer>
   )
