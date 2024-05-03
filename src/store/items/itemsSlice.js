@@ -1,15 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const items = []
+const initialState = []
 
 export const itemsSlice = createSlice({
   name: 'items',
-  initialState: items,
+  initialState,
 
   reducers: {
-    addItem: ({ items }, { payload }) => ({ ...items, payload }),
-    removeItem: ({ items }, { payload }) =>
-      items.filter((i) => i.id !== payload),
+    addItem: (state, { payload }) => [payload, ...state],
+    removeItem: (state, { payload }) => state.filter((i) => i !== payload),
   },
 })
 
