@@ -3,8 +3,8 @@ import { HaulContainer } from './haul.styles'
 const Haul = () => {
   return (
     <HaulContainer>
-      <h1>[Home]</h1>
-      <p>[Most recent Haul shows up here]</p>
+      <h2>My Haul Items</h2>
+      {}
     </HaulContainer>
   )
 }
