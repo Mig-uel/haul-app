@@ -1,4 +1,6 @@
 import Scan from './components/scan/scan.component'
+import Haul from './components/haul/haul.component'
+
 import { AppContainer, HeaderContainer } from './App.styles'
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       </HeaderContainer>
 
       <Scan />
+
+      <Haul />
     </AppContainer>
   )
 }
