@@ -7,7 +7,9 @@ export const itemsSlice = createSlice({
   initialState,
 
   reducers: {
-    addItem: (state, { payload }) => [payload, ...state],
+    addItem: (state, { payload }) => {
+      return [payload, ...state]
+    },
     removeItem: (state, { payload }) => state.filter((i) => i !== payload),
   },
 })
