@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Scanner } from '@alzera/react-scanner'
 
 import { useSelector, useDispatch } from 'react-redux'
-import { addItem } from '../../store/items/itemsSlice'
+import { addItem, removeItem } from '../../store/items/itemsSlice'
 
 import { ScannerContainer, CameraContainer } from './scan.styles'
 
@@ -12,7 +12,7 @@ const Scan = () => {
   const [error, setError] = useState(null)
 
   const items = useSelector(({ items }) => items)
-  console.log(items)
+  const dispatch = useDispatch()
 
   return (
     <ScannerContainer>
@@ -21,6 +21,7 @@ const Scan = () => {
           <Scanner
             onScan={(data) => {
               setScannedData(data)
+              dispatch(addItem(+data))
               setActive((active) => !active)
             }}
             decoderOptions={{ formats: ['ean_13'] }}
@@ -28,9 +29,9 @@ const Scan = () => {
           />
         </CameraContainer>
       )}
-      {scannedData && <p>Scanned Data: {scannedData}</p>}
-      {error && <p>Error: {error}</p>}
 
+      {/* {console.log(error)} */}
+      {/* {error && <p>Error: {error.error}</p>} */}
       <button onClick={() => setActive((active) => !active)}>Scan Haul</button>
     </ScannerContainer>
   )
