@@ -6,12 +6,13 @@ import HaulItems from '../haul-items/haul-items.component'
 const Haul = () => {
   const items = useSelector(({ items }) => items)
 
+  console.log(items)
   return (
     <>
-      <h2 style={{ marginTop: '50px' }}>My Haul Items</h2>
+      {items.length > 0 && <h2 style={{ marginTop: '50px' }}>Scanned Items</h2>}
       <HaulContainer>
         {items.map((item) => (
-          <HaulItems key={item} item={item} />
+          <HaulItems key={item.id} item={item.id} />
         ))}
       </HaulContainer>
     </>
