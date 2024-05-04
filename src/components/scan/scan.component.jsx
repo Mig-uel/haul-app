@@ -20,7 +20,7 @@ const Scan = () => {
           <Scanner
             onScan={(data) => {
               setScannedData(data)
-              dispatch(addItem(+data))
+              dispatch(addItem(data))
               setActive((active) => !active)
             }}
             decoderOptions={{ formats: ['ean_13'] }}
