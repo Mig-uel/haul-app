@@ -2,6 +2,7 @@ import Scan from './components/scan/scan.component'
 import Haul from './components/haul/haul.component'
 
 import { AppContainer, HeaderContainer } from './App.styles'
+import Hauls from './components/hauls/hauls.component'
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
       </HeaderContainer>
 
       <Scan />
-
       <Haul />
+      <Hauls />
     </AppContainer>
   )
 }
