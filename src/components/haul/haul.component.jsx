@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux'
-import { addItem } from '../../store/items/itemsSlice'
 
 import { HaulContainer } from './haul.styles'
 import HaulItems from '../haul-items/haul-items.component'
@@ -18,14 +17,5 @@ const Haul = () => {
     </>
   )
 }
-
-// {scannedData &&
-//   items.map((item) => {
-//     return (
-//       <p key={item} onClick={() => dispatch(removeItem(item))}>
-//         {item}
-//       </p>
-//     )
-//   })}
 
 export default Haul
