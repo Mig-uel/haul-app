@@ -20,7 +20,7 @@ const Scan = () => {
           <Scanner
             onScan={(data) => {
               setScannedData(data)
-              dispatch(addItem(data))
+              dispatch(addItem({ id: data }))
               setActive((active) => !active)
             }}
             decoderOptions={{ formats: ['ean_13'] }}
@@ -29,7 +29,9 @@ const Scan = () => {
         </CameraContainer>
       )}
 
-      <button onClick={() => setActive((active) => !active)}>Scan Haul</button>
+      <button onClick={() => setActive((active) => !active)}>
+        Scan A Haul
+      </button>
     </ScannerContainer>
   )
 }
