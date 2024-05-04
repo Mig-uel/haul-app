@@ -13,7 +13,7 @@ import {
 const HaulItems = ({ item }) => {
   const dispatch = useDispatch()
   const { data, isLoading, isSuccess, isError, error } = useGetItemQuery(item)
-  data && console.dir(data)
+  data && console.dir(data.product)
 
   return (
     <HaulItemContainer>
@@ -23,6 +23,7 @@ const HaulItems = ({ item }) => {
         <HaulItemInfoContainer>
           <HaulItemTitle>{data.product.product_name}</HaulItemTitle>
           <p>{data.product.code}</p>
+          <p></p>
           <FaTrash onClick={() => dispatch(removeItem(item))} />
         </HaulItemInfoContainer>
       )}
