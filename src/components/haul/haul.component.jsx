@@ -11,10 +11,9 @@ const Haul = () => {
       {items.length > 0 && <h2 style={{ marginTop: '50px' }}>Scanned Items</h2>}
       <HaulContainer>
         {items.map((item) => (
-          <HaulItems key={item} item={item} />
+          <HaulItems key={item.code} item={item} />
         ))}
       </HaulContainer>
-      {items.length > 0 && <button>Create Haul</button>}
     </>
   )
 }
