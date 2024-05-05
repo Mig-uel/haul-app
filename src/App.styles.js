@@ -4,7 +4,7 @@ export const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  outline: 2px solid red;
+  // outline: 2px solid red;
 `
 
 export const HeaderContainer = styled.div`
