@@ -4,7 +4,7 @@ export const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  /*outline: 2px solid red;*/
+  // outline: 2px solid red;
 `
 
 export const HeaderContainer = styled.div`
@@ -17,4 +17,10 @@ export const HeaderContainer = styled.div`
   p {
     font-size: 1em;
   }
+`
+export const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
 `

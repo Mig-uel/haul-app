@@ -1,19 +1,17 @@
 import { removeItem } from '../../store/items/itemsSlice'
-import { useDispatch } from 'react-redux'
-import { useGetItemQuery } from '../../store/api/apiSlice.js'
-import BarLoader from 'react-spinners/BarLoader.js'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { FaTrash } from 'react-icons/fa'
 import {
   HaulItemInfoContainer,
   HaulItemContainer,
   HaulItemTitle,
 } from './haul-items.styles'
+import { FaTrash } from 'react-icons/fa'
+import BarLoader from 'react-spinners/BarLoader.js'
 
 const HaulItems = ({ item }) => {
+  const isLoading = useSelector(({ loading }) => loading)
   const dispatch = useDispatch()
-  const { data, isLoading, isSuccess, isError, error } = useGetItemQuery(item)
-  data && console.dir(data)
 
   return (
     <HaulItemContainer>
@@ -21,9 +19,10 @@ const HaulItems = ({ item }) => {
         <BarLoader />
       ) : (
         <HaulItemInfoContainer>
-          <HaulItemTitle>{data.product.product_name}</HaulItemTitle>
-          <p>{data.product.code}</p>
-          <FaTrash onClick={() => dispatch(removeItem(item))} />
+          <HaulItemTitle>{item.product_name}</HaulItemTitle>
+          <p>UPC: {item.code}</p>
+          <p>Quantity: {item.qty}</p>
+          <FaTrash onClick={() => dispatch(removeItem(item.id))} />
         </HaulItemInfoContainer>
       )}
     </HaulItemContainer>

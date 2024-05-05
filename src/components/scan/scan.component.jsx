@@ -1,17 +1,14 @@
 import { useState } from 'react'
 import { Scanner } from '@alzera/react-scanner'
 
-import { useDispatch } from 'react-redux'
-import { addItem } from '../../store/items/itemsSlice'
+// store
+import { useLazyGetItemQuery } from '../../store/api/apiSlice'
 
+// styles
 import { ScannerContainer, CameraContainer } from './scan.styles'
 
-const Scan = () => {
-  const [scannedData, setScannedData] = useState('')
-  const [active, setActive] = useState(false)
-  const [error, setError] = useState(null)
-
-  const dispatch = useDispatch()
+const Scan = ({ active, setActive }) => {
+  const [trigger] = useLazyGetItemQuery()
 
   return (
     <ScannerContainer>
@@ -19,17 +16,13 @@ const Scan = () => {
         <CameraContainer>
           <Scanner
             onScan={(data) => {
-              setScannedData(data)
-              dispatch(addItem(data))
+              trigger(data)
               setActive((active) => !active)
             }}
             decoderOptions={{ formats: ['ean_13'] }}
-            onError={(e) => setError(e)}
           />
         </CameraContainer>
       )}
-
-      <button onClick={() => setActive((active) => !active)}>Scan Haul</button>
     </ScannerContainer>
   )
 }
