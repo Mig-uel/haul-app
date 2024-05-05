@@ -1,4 +1,4 @@
-import { createSlice, current } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = []
 
@@ -8,13 +8,13 @@ export const itemsSlice = createSlice({
 
   reducers: {
     addItem: (state, { payload }) => {
-      const exists = state.find((item) => item.id === payload)
+      const exists = state.find((item) => item.code === payload.code)
       return exists
         ? state.map((item) => {
-            if (item.id === exists.id) return { ...item, qty: item.qty + 1 }
+            if (item.code === exists.code) return { ...item, qty: item.qty + 1 }
             else return item
           })
-        : [{ id: payload, qty: 1 }, ...state]
+        : [{ ...payload, qty: 1 }, ...state]
     },
 
     removeItem: (state, { payload }) => {
