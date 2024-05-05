@@ -27,7 +27,7 @@ function App() {
         <button onClick={() => setActive((active) => !active)}>
           Scan Item
         </button>
-        <button disabled={items.length > 0 ? '' : 'true'}>Create Haul</button>
+        <button disabled={items.length > 0 ? '' : true}>Create Haul</button>
       </ButtonsContainer>
 
       <Scan active={active} setActive={setActive} />
