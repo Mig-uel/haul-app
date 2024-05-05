@@ -7,8 +7,7 @@ import { useLazyGetItemQuery } from '../../store/api/apiSlice'
 // styles
 import { ScannerContainer, CameraContainer } from './scan.styles'
 
-const Scan = () => {
-  const [active, setActive] = useState(false)
+const Scan = ({ active, setActive }) => {
   const [trigger] = useLazyGetItemQuery()
 
   return (
@@ -17,17 +16,13 @@ const Scan = () => {
         <CameraContainer>
           <Scanner
             onScan={(data) => {
-              setActive((active) => !active)
               trigger(data)
+              setActive((active) => !active)
             }}
             decoderOptions={{ formats: ['ean_13'] }}
           />
         </CameraContainer>
       )}
-
-      <button onClick={() => setActive((active) => !active)}>
-        Scan A Haul
-      </button>
     </ScannerContainer>
   )
 }
