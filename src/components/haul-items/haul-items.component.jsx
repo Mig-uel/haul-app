@@ -12,7 +12,6 @@ import BarLoader from 'react-spinners/BarLoader.js'
 const HaulItems = ({ item }) => {
   const isLoading = useSelector(({ loading }) => loading)
   const dispatch = useDispatch()
-  console.log(isLoading)
 
   return (
     <HaulItemContainer>
